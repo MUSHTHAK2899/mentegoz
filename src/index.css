@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    
+    .section {
+      @apply py-[50px] lg:py-[70px];
+    }
+    .title {
+      @apply text-2xl lg:text-[40px] leading-tight font-semibold mb-4;
+    }
+    .subtitle {
+      @apply text-[18px] lg:text-[20px] leading-relaxed mb-5 lg:mb-9;
+    }
+  }
+  .margin{
+    margin: 1%;
+  }
+  .parallel{
+    background: url('https://www.mentegoz.com/img/banner/bg9.jpg')
+    repeat fixed 100%;
+  }
+  .parallel-inenr{
+    padding-top: 9%;
+    padding-bottom: 7%;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateX(-20%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+}
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bo {
+  animation: bounce 1s infinite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
